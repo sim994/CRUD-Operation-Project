@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Update Data Form</h2>
+        <form action="/form/<%= data._id %>/update?_method=PUT" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" value="<%= data.fullname %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" value="<%= data.age %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" required><%= data.address %></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="grades">Grades</label>
+                <input type="text" id="grades" name="grades" value="<%= data.grades %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="totalMarks">Total Marks</label>
+                <input type="number" id="totalMarks" name="TotalMarks" value="<%= data.TotalMarks %>" required>
+            </div>
+
+            <button type="submit">Update</button>
+        </form>
+
+        </form>
+    </div>
+</body>
+
+</html>
